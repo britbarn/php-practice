@@ -1,12 +1,11 @@
 <?php
 
-//first, declare the array
-$task = [
-    'assigned_to' => 'Brittany',
-    'title' => 'PHP Practice',
-    'due' => 'Sept 1',
-    'completed' => false
+require 'functions.php';
 
-];
 
-require('index.view.php');
+if (checkAge(34)) {
+    echo "is of age";
+}
+else {
+    echo "is not of age";
+}
