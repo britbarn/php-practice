@@ -7,10 +7,16 @@
         <body>
             <header>
                 <ul>
-                    <!-- loop through each animal and output as a list item -->
-                    <?php foreach ($animals as $animal) : ?>
-                        <li><?= $animal ?></li>
-                    <?php endforeach; ?>
+                    <li><?= "Person: " . $task['assigned_to']; ?></li>
+                    <li><?= "Title: " . $task['title']; ?></li>
+                    <li><?= "Due date: " . $task['due']; ?></li>
+                    <li>
+                        <?php if ($task['completed']) : ?>
+                            Status: Completed
+                        <?php else : ?>
+                            Status: Incomplete
+                        <?php endif; ?>
+                    </li>
                 </ul>
             </header>
         </body>
