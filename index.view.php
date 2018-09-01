@@ -6,7 +6,12 @@
     </head>
         <body>
             <header>
-                <h1> <?= $greeting; ?></h1>
+                <ul>
+                    <!-- loop through each animal and output as a list item -->
+                    <?php foreach ($animals as $animal) : ?>
+                        <li><?= $animal ?></li>
+                    <?php endforeach; ?>
+                </ul>
             </header>
         </body>
 </html>
