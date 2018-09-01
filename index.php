@@ -1,12 +1,12 @@
 <?php
 
 //first, declare the array
-$animals = [
-    'Panda',
-    'Cat',
-    'Koala',
-    'Tiger',
-    'Dragon'
+$task = [
+    'assigned_to' => 'Brittany',
+    'title' => 'PHP Practice',
+    'due' => 'Sept 1',
+    'completed' => 'yes'
+
 ];
 
 require('index.view.php');
