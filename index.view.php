@@ -7,16 +7,10 @@
         <body>
             <header>
                 <ul>
-                    <li><?= "Person: " . $task['assigned_to']; ?></li>
-                    <li><?= "Title: " . $task['title']; ?></li>
-                    <li><?= "Due date: " . $task['due']; ?></li>
-                    <li>
-                        <?php if ($task['completed']) : ?>
-                            Status: Completed
-                        <?php else : ?>
-                            Status: Incomplete
-                        <?php endif; ?>
-                    </li>
+                    <!-- loop through each task and display the description of it -->
+                    <?php foreach ($tasks as $task) : ?>
+                        <li><?= $task->description ?></li>
+                    <?php endforeach; ?>
                 </ul>
             </header>
         </body>
