@@ -3,25 +3,9 @@
     //create task class
     class task
     {
-        //create accessible variables
+        //now that the database is setting these values directly, we just need to
+        //declare the variables for the data columns
         public $description;
-        public $completed = false;
+        public $completed;
 
-        //method that gets called every time an object is instantiated
-        public function __construct($description)
-        {
-            $this->description = $description;
-        }
-
-        //method to check the completion status
-        public function isComplete()
-        {
-            return $this->completed;
-        }
-
-        //method to set the task as complete
-        public function complete()
-        {
-            $this->completed = true;
-        }
     }
