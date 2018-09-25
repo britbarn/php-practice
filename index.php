@@ -1,11 +1,5 @@
 <?php
+require 'core/bootstrap.php';
 
-//call boostrap class and assign results to a variable
-$query = require 'bootstrap.php';
-require 'Task.php';
-
-//use the returned querybuilder to get all the todos
-$tasks = $query->selectAll('todos', 'task');
-
-//call the view to display values
-require 'index.view.php';
+//pull in the router class to load the attempted uri
+require Router::load('routes.php')->direct(Request::uri());
